@@ -2,6 +2,8 @@ export const content = {
       uiText: {
     currentJob: "Actualidad",
     experienceTitle: "Experiencia",
+    projectsTitle: "Proyectos",
+    skillsTitle: "Habilidades",
   },
   hero: {
     name: "Rosario Arguello",
