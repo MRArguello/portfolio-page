@@ -1,13 +1,36 @@
 import React from 'react';
-import Container from '../components/Container';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Hero() {
+    const { content } = useLanguage()
+    const { hero } = content
     return (
-        <Container className="py-20">
-            <h1 className="text-4xl font-bold">Rosario Arguello</h1>
-            <p className="mt-4 text-lg text-gray-700">Senior frontend engineer with a background in UX/UI design, focused on building clean, performant, and accessible user interfaces.</p>
-            <p>I have 8 years of experience working with JavaScript and modern frontend frameworks, and I enjoy collaborating closely with product and design to turn ideas into reliable, well-crafted interfaces.</p>
-            <p>I am particularly interested in design systems, component libraries, and tools that help teams move fast while maintaining visual consistency and quality.</p>
-        </Container>
-    );
+        <section className="min-h-screen flex items-center">
+            <div className="max-w-3xl px-6">
+                <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+                    {hero.name}
+                </h1>
+
+                <p className="mt-4 text-xl text-neutral-400">
+                    {hero.intro}
+                </p>
+
+                <p className="mt-6 text-neutral-500 max-w-xl">
+                    {hero.description}
+                </p>
+
+                <div className="mt-8 flex gap-6 text-sm text-neutral-400">
+                    <a href="https://www.github.com/MRArguello" className="hover:text-neutral-200">
+                        {hero.links.github}
+                    </a>
+                    <a href="https://www.linkedin.com/rosario-arguello" className="hover:text-neutral-200">
+                        {hero.links.linkedin}
+                    </a>
+                    <a href="mailto:mrosario.arguello[at]gmail.com" className="hover:text-neutral-200">
+                        {hero.links.email}
+                    </a>
+                </div>
+            </div>
+        </section>
+    )
 }
