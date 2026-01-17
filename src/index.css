@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Global base styles */
 html {
   scroll-behavior: smooth;
 }
@@ -8,3 +7,11 @@ html {
 body {
   margin: 0;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #297373;
+  --color-secondary: #7AE7C7;
+}
+

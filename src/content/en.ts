@@ -11,7 +11,7 @@ export const content = {
     intro:
       "Frontend engineer focused on building usable, accessible and well-crafted interfaces with React.",
     description:
-      "Originally from Argentina, based in Europe since 2018. I work at the intersection of engineering and design, with a strong interest in design systems and component libraries.",
+      "Originally from Argentina, currently based in Europe. I work at the intersection of engineering and design, with a strong interest in design systems and component libraries.",
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",

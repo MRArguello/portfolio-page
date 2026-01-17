@@ -11,7 +11,7 @@ export const content = {
     intro:
       "Frontend engineer enfocada en construir interfaces usables, accesibles y bien cuidadas con React.",
     description:
-      "Soy de Argentina y vivo en Europa desde 2018. Trabajo en la intersección entre ingeniería y diseño, con especial interés en design systems y librerías de componentes.",
+      "Soy de Argentina y actualmente vivo en Europa. Trabajo en la intersección entre ingeniería y diseño, con especial interés en design systems y librerías de componentes.",
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",

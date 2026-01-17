@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="px-3 py-1 border rounded-md text-sm text-neutral-700 dark:text-neutral-200 border-neutral-400 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+      className="px-3 py-1 border rounded-md text-sm text-primary font-semibold border-primary hover:bg-neutral-200 dark:hover:bg-zinc-800 transition"
     >
       {language === "en" ? "ES" : "EN"}
     </button>

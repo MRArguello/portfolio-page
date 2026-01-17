@@ -7,7 +7,7 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <div>
+    <div className='bg-neutral-100 dark:bg-zinc-900'>
       <Header />
       <Hero />
       <Experience />
