@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
+import BackgroundAnimation from '../components/BackgroundAnimation';
 
 const SocialLink = ({ href, label }: { href: string; label: string }) => (
     <a href={href} target='_blank' className="hover:text-primary dark:hover:text-primary dark:text-secondary">
@@ -11,8 +12,8 @@ export default function Hero() {
     const { content } = useLanguage()
     const { hero } = content
     return (
-        <section className="min-h-screen flex items-center">
-            <div className="max-w-3xl px-6">
+        <section className="min-h-screen flex items-center z-1">
+            <div className="max-w-3xl px-6 bg-zinc-900 z-1">
                 <h1 className="text-4xl text-primary sm:text-5xl font-semibold tracking-tight">
                     {hero.name}
                 </h1>
@@ -28,6 +29,7 @@ export default function Hero() {
                     <SocialLink href="mailto:mrosario.arguello[at]gmail.com" label={hero.links.email} />
                 </div>
             </div>
+            <BackgroundAnimation />
         </section>
     )
 }
