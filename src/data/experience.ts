@@ -3,12 +3,30 @@ export type Experience = {
   company: string;
   role: string;
   location: string;
-    startDate: string;
-    endDate?: string;
-    tech: string[];
+  startDate: string;
+  endDate?: string;
+  tech: string[];
 };
 
 export const experience: Experience[] = [
+  {
+    id: "treatwell",
+    company: "Treatwell",
+    role: "Senior Software Engineer",
+    location: "Berlin, Germany",
+    startDate: "2025-05",
+    tech: [
+      "React",
+      "TypeScript",
+      "Sentry",
+      "Braze",
+      "Growthbook",
+      "Cypress",
+      "SEO Optimization",
+      "Performance Monitoring",
+      "A/B Testing"
+    ],
+  },
   {
     id: "omio",
     company: "Omio",
@@ -57,6 +75,27 @@ export const experience: Experience[] = [
       "Contentful",
     ],
   },
+  {
+    id: "savedo",
+    company: "Savedo GmbH",
+    role: "Frontend Engineer",
+    location: "Berlin, Germany",
+    startDate: "2018-07",
+    endDate: "2020-10",
+    tech: [
+      "React", 
+      "TypeScript", 
+      "Gatsby", 
+      "Redux", 
+      "Storybook", 
+      "Cypress", 
+      "Jest", 
+      "Styled Components", 
+      "Design Systems", 
+      "Contentful", 
+      "Webpack"
+    ],
+  }
 ]
 
 

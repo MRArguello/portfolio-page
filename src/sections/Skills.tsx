@@ -3,15 +3,16 @@ import Container from '../components/Container';
 import SectionTitle from '../components/SectionTitle';
 import { skills } from '../data/skills';
 import { useLanguage } from '../i18n/LanguageContext';
+import { Pill } from '../components/Pill';
 
 export default function Skills() {
     const {content: {uiText: {skillsTitle}}} = useLanguage();
   return (
     <Container className="py-12">
       <SectionTitle title={skillsTitle} />
-      <ul className="list-disc ml-5">
+      <ul className="ml-5 flex flex-wrap gap-2">
         {skills.map((s) => (
-          <li key={s}>{s}</li>
+          <Pill key={s} label={s} variant='solid' />
         ))}
       </ul>
     </Container>

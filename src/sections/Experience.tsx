@@ -7,6 +7,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Experience() {
   const { content: { uiText } } = useLanguage();
+
   return (
     <Container className="py-12">
       <SectionTitle title={uiText.experienceTitle} />

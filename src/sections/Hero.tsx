@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import BackgroundAnimation from '../components/BackgroundAnimation';
+import SocialLinks from '../components/SocialLinks';
 
-const SocialLink = ({ href, label }: { href: string; label: string }) => (
-    <a href={href} target='_blank' className="hover:text-primary dark:hover:text-primary dark:text-secondary">
-        {label}
-    </a>
-);
 
-export default function Hero() {
-    const { content } = useLanguage()
-    const { hero } = content
+const Hero = forwardRef<HTMLElement>((_, ref) => {
+    const { content } = useLanguage();
+    const { hero } = content;
+
     return (
-        <section className="min-h-screen flex items-center z-1">
+        <section ref={ref} className="min-h-screen flex items-center z-1">
             <div className="max-w-3xl px-6 bg-zinc-900 z-1">
                 <h1 className="text-4xl text-primary sm:text-5xl font-semibold tracking-tight">
                     {hero.name}
@@ -23,13 +19,12 @@ export default function Hero() {
                 <p className="mt-6 text-neutral-800 dark:text-neutral-500 max-w-xl">
                     {hero.description}
                 </p>
-                <div className="mt-8 flex gap-6 text-sm text-neutral-400">
-                    <SocialLink href="https://www.github.com/MRArguello" label={hero.links.github} />
-                    <SocialLink href="https://www.linkedin.com/rosario-arguello" label={hero.links.linkedin} />
-                    <SocialLink href="mailto:mrosario.arguello[at]gmail.com" label={hero.links.email} />
-                </div>
+                <SocialLinks className='mt-4' />
             </div>
-            <BackgroundAnimation />
         </section>
     )
-}
+});
+
+Hero.displayName = "Hero";
+
+export default Hero;
