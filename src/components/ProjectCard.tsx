@@ -13,7 +13,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       <h3 className="font-semibold">{project.title}</h3>
       {project.description && <p className="mt-2">{project.description}</p>}
       {project.link && (
-        <a href={project.link} className="text-blue-600 mt-2 inline-block">View project</a>
+        <a href={project.link} className="text-blue-600 mt-2 inline-block">
+          View project
+        </a>
       )}
     </article>
   );

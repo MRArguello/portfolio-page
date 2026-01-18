@@ -6,7 +6,11 @@ import projects from '../data/projects';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Projects() {
-    const {content: {uiText:{ projectsTitle}}} = useLanguage();  
+  const {
+    content: {
+      uiText: { projectsTitle },
+    },
+  } = useLanguage();
   return (
     <Container className="py-12">
       <SectionTitle title={projectsTitle} />

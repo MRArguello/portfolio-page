@@ -10,8 +10,8 @@ const projects: Project[] = [
     id: 1,
     title: 'Portfolio Website',
     description: 'Personal portfolio built with React and Vite.',
-    link: '#'
-  }
+    link: '#',
+  },
 ];
 
 export default projects;

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 html {
   scroll-behavior: smooth;
@@ -12,6 +12,5 @@ body {
 
 @theme {
   --color-primary: #297373;
-  --color-secondary: #7AE7C7;
+  --color-secondary: #7ae7c7;
 }
-

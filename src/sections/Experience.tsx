@@ -6,7 +6,9 @@ import experience from '../data/experience';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Experience() {
-  const { content: { uiText } } = useLanguage();
+  const {
+    content: { uiText },
+  } = useLanguage();
 
   return (
     <Container className="py-12">
