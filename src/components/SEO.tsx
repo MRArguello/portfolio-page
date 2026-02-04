@@ -64,7 +64,7 @@ export default function SEO() {
 
     useEffect(() => {
         // Structured data (JSON-LD) - remove old and add new
-        let existingScript = document.querySelector('script[type="application/ld+json"]');
+        const existingScript = document.querySelector('script[type="application/ld+json"]');
         if (existingScript) {
             existingScript.remove();
         }

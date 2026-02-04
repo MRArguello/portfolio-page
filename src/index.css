@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  color-scheme: light dark;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

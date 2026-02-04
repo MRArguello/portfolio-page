@@ -1,4 +1,4 @@
-import { type ReactNode, useState, useEffect } from 'react';
+import { type ReactNode, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -17,6 +17,7 @@ const SocialLink = ({ href, label, icon, variant }: SocialLinkProps) => (
     rel="noreferrer"
     aria-label={label}
     className="
+    text-neutral-500
       hover:text-primary
       dark:hover:text-primary
       dark:text-secondary
@@ -47,13 +48,7 @@ export default function SocialLinks({
   const {
     content: { hero },
   } = useLanguage();
-  const [emailHref, setEmailHref] = useState<string>('#');
-
-  // Decode email on client-side only
-  useEffect(() => {
-    const decodedEmail = decodeEmail();
-    setEmailHref(`mailto:${decodedEmail}`);
-  }, []);
+  const [emailHref] = useState<string>(() => `mailto:${decodeEmail()}`);
 
   return (
     <div
