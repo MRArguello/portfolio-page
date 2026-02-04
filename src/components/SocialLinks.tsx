@@ -56,7 +56,7 @@ export default function SocialLinks({
         variant={variant}
       />
       <SocialLink
-        href="https://www.linkedin.com/rosario-arguello"
+        href="https://www.linkedin.com/in/rosario-arguello"
         label={hero.links.linkedin}
         icon={<FaLinkedin />}
         variant={variant}

@@ -13,7 +13,7 @@ export default function Experience() {
   return (
     <Container className="py-12">
       <SectionTitle title={uiText.experienceTitle} />
-      <div className="z-1 bg-zync-900">
+      <div className="bg-zinc-900">
         {experience.map((e) => (
           <ExperienceItem key={e.id} item={e} />
         ))}
