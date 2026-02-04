@@ -32,8 +32,10 @@ export default function Header({ heroRef }: HeaderProps) {
   }, [lastScrollY, heroRef]);
 
   return (
-    <header className={
-      `header fixed top-0 right-0 left-0 z-50 flex justify-end px-4 py-4 md:py-6 md:px-6 transition-transform duration-300 ease-in-out
+    <header
+      aria-label="Site navigation"
+      className={
+        `header fixed top-0 right-0 left-0 z-50 flex justify-end px-4 py-4 md:py-6 md:px-6 transition-all duration-300 ease-in-out
          ${visible ? 'translate-y-0' : '-translate-y-full'}
          ${pastHero ? 'bg-neutral-100 dark:bg-zinc-900 backdrop-blur-md' : 'bg-transparent'}
 `}>

@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, useState, useEffect } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -27,6 +27,14 @@ const SocialLink = ({ href, label, icon, variant }: SocialLinkProps) => (
   </a>
 );
 
+// Email obfuscation: decode on client-side
+// Using character codes to obfuscate
+const decodeEmail = (): string => {
+  // Simple character code array (obfuscated)
+  const codes = [109, 114, 111, 115, 97, 114, 105, 111, 46, 97, 114, 103, 117, 101, 108, 108, 111, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
+  return String.fromCharCode(...codes);
+};
+
 type SocialLinksProps = {
   variant?: 'text' | 'icon';
   className?: string;
@@ -39,6 +47,13 @@ export default function SocialLinks({
   const {
     content: { hero },
   } = useLanguage();
+  const [emailHref, setEmailHref] = useState<string>('#');
+
+  // Decode email on client-side only
+  useEffect(() => {
+    const decodedEmail = decodeEmail();
+    setEmailHref(`mailto:${decodedEmail}`);
+  }, []);
 
   return (
     <div
@@ -62,7 +77,7 @@ export default function SocialLinks({
         variant={variant}
       />
       <SocialLink
-        href="mailto:mrosario.arguello[at]gmail.com"
+        href={emailHref}
         label={hero.links.email}
         icon={<FaEnvelope />}
         variant={variant}

@@ -4,6 +4,19 @@ import './HeroBackground.css';
 export default function HeroBackground() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [progress, setProgress] = useState(0);
+    const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        setPrefersReducedMotion(mediaQuery.matches);
+
+        const handleChange = (e: MediaQueryListEvent) => {
+            setPrefersReducedMotion(e.matches);
+        };
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
 
     useEffect(() => {
         const el = containerRef.current;
@@ -24,6 +37,8 @@ export default function HeroBackground() {
     }, []);
 
     const fadeOut = 1 - progress * 1.6;
+    const primaryTransform = prefersReducedMotion ? 'none' : `translateY(${progress * 40}px)`;
+    const secondaryTransform = prefersReducedMotion ? 'none' : `translateY(${progress * 70}px)`;
 
     return (
         <div
@@ -34,14 +49,14 @@ export default function HeroBackground() {
             <div
                 className="hero-layer hero-glow primary"
                 style={{
-                    transform: `translateY(${progress * 40}px)`
+                    transform: primaryTransform
                 }}
             />
 
             <div
                 className="hero-layer hero-glow secondary"
                 style={{
-                    transform: `translateY(${progress * 70}px)`
+                    transform: secondaryTransform
                 }}
             />
 

@@ -4,6 +4,8 @@ export const content = {
     experienceTitle: 'Experiencia',
     projectsTitle: 'Proyectos',
     skillsTitle: 'Habilidades',
+    switchLanguage: 'Cambiar idioma',
+    viewProject: 'Ver proyecto',
   },
   hero: {
     name: 'Rosario Arguello',
