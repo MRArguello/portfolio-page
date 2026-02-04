@@ -5,6 +5,7 @@ import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
 
 function App() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="bg-neutral-100 dark:bg-zinc-900">
+      <SEO />
       <Header heroRef={heroRef} />
       <Hero ref={heroRef} />
       <Projects />
