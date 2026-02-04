@@ -32,20 +32,14 @@ export default function Header({ heroRef }: HeaderProps) {
   }, [lastScrollY, heroRef]);
 
   return (
-    <header
-      className={`
-        fixed top-0 left-0 right-0 z-50
-        flex justify-end items-center
-        py-1 px-6
-        bg-neutral-100 dark:bg-zinc-900
-        transition-transform duration-300 ease-in-out
-        ${visible ? 'translate-y-0' : '-translate-y-full'}
-      `}
-    >
-      <div className="flex items-center justify-between py-4 px-6 w-full">
-        {pastHero && <SocialLinks variant="icon" />}
-        <LanguageSwitcher />
-      </div>
+    <header className={
+      `header fixed top-0 right-0 left-0 z-50 flex justify-end px-6 py-6
+         ${visible ? 'translate-y-0' : '-translate-y-full'}
+         ${pastHero ? 'bg-neutral-100 dark:bg-zinc-900 backdrop-blur-md' : 'bg-transparent'}
+`}>
+      {pastHero && <SocialLinks variant="icon" />}
+      <LanguageSwitcher />
     </header>
+
   );
 }

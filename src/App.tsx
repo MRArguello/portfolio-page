@@ -11,8 +11,8 @@ function App() {
     <div className="bg-neutral-100 dark:bg-zinc-900">
       <Header heroRef={heroRef} />
       <Hero ref={heroRef} />
-      <Experience />
       <Projects />
+      <Experience />
       <Footer />
     </div>
   );
