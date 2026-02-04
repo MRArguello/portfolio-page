@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../components/Container';
 import SectionTitle from '../components/SectionTitle';
 import { skills } from '../data/skills';

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Experience } from '../data/experience';
 import { formatPeriod } from '../utils/formatPeriod';
 import { useLanguage } from '../i18n/LanguageContext';

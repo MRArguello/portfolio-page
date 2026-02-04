@@ -1,4 +1,3 @@
-import React from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
 import SocialLinks from './SocialLinks';
 

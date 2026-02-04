@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Hero from './sections/Hero';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';

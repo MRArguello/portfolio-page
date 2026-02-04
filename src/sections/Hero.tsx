@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import SocialLinks from '../components/SocialLinks';
 import HeroBackground from '../components/HeroBackground';

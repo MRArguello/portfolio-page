@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type Project = {
   id: number | string;
   title: string;

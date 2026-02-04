@@ -1,4 +1,4 @@
-import React from 'react';
+import { type ReactNode } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 type SocialLinkProps = {
   href: string;
   label: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   variant: 'text' | 'icon';
 };
 
