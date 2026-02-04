@@ -1,4 +1,3 @@
-import LanguageSwitcher from './LanguageSwitcher';
 import SocialLinks from './SocialLinks';
 
 export default function Footer() {
