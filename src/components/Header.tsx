@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
-import SocialLinks from './SocialLinks';
+import DarkModeToggle from './DarkModeToggle';
 
 type HeaderProps = {
   heroRef: React.RefObject<HTMLElement | null>;
@@ -39,7 +39,7 @@ export default function Header({ heroRef }: HeaderProps) {
          ${visible ? 'translate-y-0' : '-translate-y-full'}
          ${pastHero ? 'bg-neutral-100 dark:bg-zinc-900 backdrop-blur-md' : 'bg-transparent'}
 `}>
-      {pastHero && <SocialLinks variant="icon" />}
+      <DarkModeToggle />
       <LanguageSwitcher />
     </header>
 
